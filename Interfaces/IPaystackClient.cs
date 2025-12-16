@@ -15,7 +15,7 @@ public interface IPaystackClient
     Task<PaystackResponse<ResolveAccountResponse>> ResolveAccountNumberAsync(string accountNumber, string bankCode);
     
     Task<PaystackResponse<DedicatedAccountResponse>> CreateDedicatedAccountAsync(CreateDedicatedAccountRequest request);
-    Task<PaystackResponse<DedicatedAccountResponse>> CreateDedicatedAccountAsync(CreateCustomerRequest request);
+    Task<PaystackResponse<DedicatedAccountResponse>> CreateDedicatedAccountAsync(CreateCustomerRequest request, string preferredBank);
     
     Task<PaystackResponse<DedicatedAccountResponse[]>> ListDedicatedAccountsAsync(bool? active = null, string? currency = null, string? providedBank = null, string? bankId = null, string? customer = null);
     Task<PaystackResponse<DedicatedAccountResponse>> GetDedicatedAccountAsync(string accountId);

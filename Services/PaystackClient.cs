@@ -131,7 +131,7 @@ public class PaystackClient : IPaystackClient
         return JsonSerializer.Deserialize<PaystackResponse<DedicatedAccountResponse>>(responseJson, _jsonOptions)!;
     }
     
-    public async Task<PaystackResponse<DedicatedAccountResponse>> CreateDedicatedAccountAsync(CreateCustomerRequest request)
+    public async Task<PaystackResponse<DedicatedAccountResponse>> CreateDedicatedAccountAsync(CreateCustomerRequest request, string preferredBank)
     {
         var customer = await CreateCustomerAsync(request);
 
@@ -141,7 +141,7 @@ public class PaystackClient : IPaystackClient
         var dvaRequest = new CreateDedicatedAccountRequest()
         {
             Customer = customer.Data.CustomerCode,
-            PreferredBank = "test-bank",
+            PreferredBank = preferredBank,
         };
         
         var json = JsonSerializer.Serialize(dvaRequest, _jsonOptions);
