@@ -1,29 +1,37 @@
- name: Publish to NuGet
-  on:
-    push:
-      branches: [master]
+name: Publish to NuGet
 
-  jobs:
-    publish:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
+on:
+  push:
+    branches:
+      - master
 
-        - name: Setup .NET
-          uses: actions/setup-dotnet@v4
-          with:
-            dotnet-version: 8.0.x   # match the SDK you build with; change if you target another
+jobs:
+  publish:
+    runs-on: ubuntu-latest
 
-        - name: Restore
-          run: dotnet restore
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-        - name: Build
-          run: dotnet build -c Release --no-restore
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
 
-        - name: Pack
-          run: dotnet pack ReenPaystack.csproj -c Release -o ./nupkg --no-build
+      - name: Restore dependencies
+        run: dotnet restore
 
-        - name: Push to nuget.org
-          env:
-            NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-          run: dotnet nuget push "./nupkg/*.nupkg" -k "$NUGET_API_KEY" -s https://api.nuget.org/v3/index.json --skip-duplicate
+      - name: Build (Release)
+        run: dotnet build -c Release --no-restore
+
+      - name: Pack NuGet package
+        run: dotnet pack ReenPaystack.csproj -c Release -o ./nupkg --no-build
+
+      - name: Publish to nuget.org
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          dotnet nuget push "./nupkg/*.nupkg" \
+            --api-key "$NUGET_API_KEY" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
