@@ -1,0 +1,12 @@
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.csproj.AssemblyReference.cache
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.AssemblyInfoInputs.cache
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.AssemblyInfo.cs
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.csproj.CoreCompileInputs.cache
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/bin/Debug/net10.0/ReenPaystack.deps.json
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/bin/Debug/net10.0/ReenPaystack.dll
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/bin/Debug/net10.0/ReenPaystack.pdb
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.dll
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/refint/ReenPaystack.dll
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ReenPaystack.pdb
+/Users/maureeno/Documents/Projects/Baige/NCubeSDK/ReenPaystack/obj/Debug/net10.0/ref/ReenPaystack.dll
