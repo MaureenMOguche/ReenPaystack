@@ -1,0 +1,29 @@
+ name: Publish to NuGet
+  on:
+    push:
+      branches: [master]
+
+  jobs:
+    publish:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+
+        - name: Setup .NET
+          uses: actions/setup-dotnet@v4
+          with:
+            dotnet-version: 8.0.x   # match the SDK you build with; change if you target another
+
+        - name: Restore
+          run: dotnet restore
+
+        - name: Build
+          run: dotnet build -c Release --no-restore
+
+        - name: Pack
+          run: dotnet pack ReenPaystack.csproj -c Release -o ./nupkg --no-build
+
+        - name: Push to nuget.org
+          env:
+            NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+          run: dotnet nuget push "./nupkg/*.nupkg" -k "$NUGET_API_KEY" -s https://api.nuget.org/v3/index.json --skip-duplicate
