@@ -142,6 +142,7 @@ public class PaystackClient : IPaystackClient
         {
             Customer = customer.Data.CustomerCode,
             PreferredBank = preferredBank,
+            Phone = customer.Data.Phone
         };
         
         var json = JsonSerializer.Serialize(dvaRequest, _jsonOptions);
