@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>ReenPaystack</PackageId>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
         <Authors>Baige</Authors>
         <Description>A comprehensive .NET SDK for Paystack payment gateway integration</Description>
     </PropertyGroup>

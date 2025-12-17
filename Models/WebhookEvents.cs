@@ -22,6 +22,7 @@ public class PaystackWebhookEvent<T> where T : class
 
 public class ChargeSuccessEvent
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
@@ -34,6 +35,7 @@ public class ChargeSuccessEvent
     [JsonPropertyName("reference")]
     public string Reference { get; set; } = string.Empty;
 
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("amount")]
     public decimal Amount { get; set; }
 
@@ -76,11 +78,13 @@ public class ChargeSuccessEvent
 
 public class CustomerIdentificationEvent
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("customer_id")]
-    public int CustomerId { get; set; }
+    public long CustomerId { get; set; }
 
     [JsonPropertyName("customer_code")]
     public string CustomerCode { get; set; } = string.Empty;
@@ -106,6 +110,7 @@ public class CustomerIdentificationEvent
 
 public class DedicatedAccountAssignSuccessEvent
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
@@ -142,6 +147,7 @@ public class DedicatedAccountAssignSuccessEvent
 
 public class TransferSuccessEvent
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
@@ -151,6 +157,7 @@ public class TransferSuccessEvent
     [JsonPropertyName("source")]
     public string Source { get; set; } = string.Empty;
 
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("amount")]
     public decimal Amount { get; set; }
 
@@ -178,12 +185,14 @@ public class TransferSuccessEvent
 
 public class InvoiceSuccessEvent
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
     [JsonPropertyName("domain")]
     public string Domain { get; set; } = string.Empty;
 
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("amount")]
     public decimal Amount { get; set; }
 
@@ -235,6 +244,7 @@ public class InvoiceSuccessEvent
 
 public class SubscriptionSuccessEvent
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
@@ -277,6 +287,7 @@ public class SubscriptionSuccessEvent
 
 public class WebhookCustomerInfo
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
@@ -349,6 +360,7 @@ public class WebhookAuthorizationInfo
 
 public class WebhookPlanInfo
 {
+    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     [JsonPropertyName("id")]
     public long Id { get; set; }
 
