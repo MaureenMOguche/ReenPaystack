@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A comprehensive .NET SDK for Paystack payment gateway integration")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c369af6aa2eff51e13358792fbe4400bc56660")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9042cccc14a64a36ef451ecd90c816d1b8feeae2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReenPaystack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReenPaystack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
