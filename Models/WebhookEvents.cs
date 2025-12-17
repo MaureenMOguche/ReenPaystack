@@ -23,7 +23,7 @@ public class PaystackWebhookEvent<T> where T : class
 public class ChargeSuccessEvent
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("domain")]
     public string Domain { get; set; } = string.Empty;
@@ -107,7 +107,7 @@ public class CustomerIdentificationEvent
 public class DedicatedAccountAssignSuccessEvent
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("account_name")]
     public string AccountName { get; set; } = string.Empty;
@@ -143,7 +143,7 @@ public class DedicatedAccountAssignSuccessEvent
 public class TransferSuccessEvent
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("reference")]
     public string Reference { get; set; } = string.Empty;
@@ -179,7 +179,7 @@ public class TransferSuccessEvent
 public class InvoiceSuccessEvent
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("domain")]
     public string Domain { get; set; } = string.Empty;
@@ -236,7 +236,7 @@ public class InvoiceSuccessEvent
 public class SubscriptionSuccessEvent
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("domain")]
     public string Domain { get; set; } = string.Empty;
@@ -278,7 +278,7 @@ public class SubscriptionSuccessEvent
 public class WebhookCustomerInfo
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("first_name")]
     public string? FirstName { get; set; }
@@ -350,7 +350,7 @@ public class WebhookAuthorizationInfo
 public class WebhookPlanInfo
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     [JsonPropertyName("name")]
     public string Name { get; set; } = string.Empty;
